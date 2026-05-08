@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalación Entidad</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <div class="header">
+            <span class="header-title">Entidades</span>
+        </div>
+        <div class="main-panel">
+            <div class="install-header">
+                INSTALACION ENTIDAD
+            </div>
+            <div class="form-container">
+                <div class="form-row">
+                    <label for="entidad">Entidad:</label>
+                    <div class="select-wrapper">
+                        <select id="entidad" name="entidad" size="7" onclick="document.getElementById('sigla').value = this.value.substring(0,4); document.getElementById('institucion').value = this.options[this.selectedIndex].text.substring(5);">
+                            <option value="0006 Vicepresidencia del Estado Plurinacional" selected>0006 Vicepresidencia del Estado Plurinacional</option>
+                            <option value="0010 Ministerio de Relaciones Exteriores">0010 Ministerio de Relaciones Exteriores</option>
+                            <option value="0015 Ministerio de Gobierno">0015 Ministerio de Gobierno</option>
+                            <option value="0016 Ministerio de Educación">0016 Ministerio de Educación</option>
+                            <option value="0020 Ministerio de Defensa">0020 Ministerio de Defensa</option>
+                            <option value="0025 Ministerio de la Presidencia">0025 Ministerio de la Presidencia</option>
+                            <option value="0030 Ministerio de Justicia">0030 Ministerio de Justicia</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="sigla">Sigla:</label>
+                    <input type="text" id="sigla" name="sigla" value="0006" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="institucion">Institución:</label>
+                    <input type="text" id="institucion" name="institucion" value="Vicepresidencia del Estado Plurinacional" readonly>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="button ok-button">OK</button>
+                <button class="button salir-button">Salir</button>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+</html>

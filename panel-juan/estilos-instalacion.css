@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; 
+    position: relative;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="%23cceeff" opacity="0.5"><path d="M0 0h100v100H0z"/><path d="M50 0L0 50h100zM0 50l50 50h-100zM100 50L50 0v100z"/></svg>'); /* Patrón genérico que simula un edificio abstracto */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.2) contrast(1.1); 
+    z-index: -1; 
+}
+
+
+.container {
+    background-color: #f7f7f7; 
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 600px; 
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #3366cc; 
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    flex-grow: 1;
+}
+
+
+.main-panel {
+    padding: 20px;
+}
+
+.install-header {
+    background-color: #6699ff; 
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.form-container {
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.form-row label {
+    width: 90px; 
+    text-align: right;
+    margin-right: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-row input[type="text"],
+.form-row select {
+    flex-grow: 1;
+    padding: 5px 8px;
+    border: 1px solid #a0a0a0;
+    border-radius: 3px;
+    font-size: 13px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none;         
+}
+
+
+.select-wrapper {
+    flex-grow: 1;
+    position: relative;
+    border: 1px solid #a0a0a0; 
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.select-wrapper select {
+    width: 100%;
+    border: none; 
+    padding: 0; 
+    margin: 0; 
+    box-shadow: none; 
+    background-color: transparent; 
+    height: auto;
+    min-height: 150px; 
+    line-height: 20px; 
+    outline: none; 
+}
+
+.select-wrapper select option {
+    padding: 3px 8px; 
+}
+
+.select-wrapper select option:checked {
+    background-color: #007bff; 
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+.button {
+    padding: 8px 25px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 100%); 
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    min-width: 80px; 
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #e0e0e0 0%, #d0d0d0 100%);
+    border-color: #555;
+}
+
+.button.ok-button {
+    border-color: #4CAF50; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); 
+}
+
+.select-wrapper select option:nth-child(6) { 
+    background-color: #007bff; 
+    color: white;
+}
+
+.select-wrapper select:focus option:nth-child(6) {
+    outline: 1px dotted white;
+}

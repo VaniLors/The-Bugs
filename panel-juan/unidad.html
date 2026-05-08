@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad Administrativa</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="header-title">Unidad Administrativa</span>
+        </div>
+        <div class="main-panel">
+            <div class="panel-header">
+                UNIDAD ADMINISTRATIVA
+            </div>
+            <div class="form-section">
+                <div class="form-row">
+                    <label for="unidadAdm">Unidad Administrativa:</label>
+                    <input type="text" id="unidadAdm" name="unidadAdm" value="025" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" value="LA PAZ" readonly>
+                </div>
+                <div class="form-row large-label">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" readonly>GACETA OFICIAL DE BOLIVIA</textarea>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <div class="doc-buttons">
+                    <button class="doc-button">PASO 1</button>
+                    <button class="doc-button">PASO 2</button>
+                </div>
+                <div class="action-buttons">
+                    
+                    <button class="button grab-button" onclick="mostrarMensajeExito()">Grabar</button>
+                    <button class="button salir-button">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalExito" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">VSI AF</span>
+                <span class="close-button" onclick="cerrarMensajeExito()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5orgLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2Q1ZWVmMCI+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEycy41MiAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNUgtMTJ2LTJoLTJ2LTdoMnY3aDR2MmptLTIuNzUtMTJjLjY5IDAgMS4yNS41NiAxLjI1IDEuMjVTMTIuOTQgNiAxMi4yNSA2UyExMSA2LjU2IDExIDcuMjUgMTEuNTYgOCAxMi4yNSA4eiIvPjwvc3ZnPg==" alt="Info Icon" class="info-icon">
+                <span>Los datos fueron ingresados correctamente</span>
+            </div>
+            <div class="modal-footer">
+                <button class="button modal-accept-button" onclick="cerrarMensajeExito()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        function mostrarMensajeExito() {
+            document.getElementById('modalExito').style.display = 'block';
+        }
+
+        
+        function cerrarMensajeExito() {
+            document.getElementById('modalExito').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modalExito');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
